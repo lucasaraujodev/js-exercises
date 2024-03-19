@@ -10,13 +10,21 @@
     <!-- create a forms here -->
 
     <script>
-        alert("Hello, recruit!")
-        const number1 = prompt('Enter a number:')
-        const number2 = prompt('Enter another number:')
 
-        
+        alert("Hello, user!")
+        number1 = prompt('Enter a number:')
+        number2 = prompt('Enter another number:')      
+
+        addition = parseFloat(number1) + parseFloat(number2)
+        subtraction = number1 - number2
+        multiplication = number1 * number2
+        division = number1 / number2
+
+        alert(number1 + " + " + number2 + " = " + addition)
+        alert(number1 + " - " + number2 + " = " + subtraction)
+        alert(number1 + " x " + number2 + " = " + multiplication)
+        alert(number1 + " / " + number2 + " = " + division)
      
-
         
     </script>
     

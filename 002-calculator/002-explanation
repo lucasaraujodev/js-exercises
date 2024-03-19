@@ -2,4 +2,4 @@ Escreva um programa em js que permita inserir dois valores numérios e então ca
 Após calular os resultados, o programa deve exibí-los na tela.
 
 OBS: Considere a seguinte função para converter string-number.
-    Ex: parseFloat("42)
+    Ex: parseFloat("42")
