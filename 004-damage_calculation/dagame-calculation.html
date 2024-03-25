@@ -11,13 +11,40 @@
 
      <script>
 
-       
+let attacker = prompt('Attacker name:')
+let attackPower = prompt('Attack power:')
+
+let defender = prompt ('Defender’s name:')
+let lifeScore = prompt ('Life score Defender: ')
+let defenderPower = prompt ('Defender power:')
+let shield = prompt('Does defender has a shield? (yes/no)')
+
+attackPower = attackPower.parseInt(attackPower)
+defenderPower = defenderPower.parseInt(defenderPower)
+lifeScore = lifeScore.parseInt(lifeScore)
+
+if (attackPower > defenderPower && shield == 'no') {
+    let damage = attackPower - defenderPower
+    lifeScore -= damage
+    alert('Damage: ' + damage + '\nLife Score of ' + defender + ' : ' + lifeScore)
+}
+else if (attackPower > defenderPower && shield == 'yes') {
+    let damage = (attackPower - defenderPower) / 2
+    alert('Damage: ' + damage + '\nLife Score of ' + defender + ' : ' + lifeScore)
+}
+else {
+    let damage = 0
+    alert('Damage: ' + damage + '\nLife Score of ' + defender + ' : ' + lifeScore)
+}
+
+
+
+
      
         
      </script>
      
-        
-    </script>
+    
     
 </body>
 </html>
