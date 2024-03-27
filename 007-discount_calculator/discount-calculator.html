@@ -7,8 +7,8 @@
 </head>
 <body>
     <script>
-        purchase = prompt('Enter the purchase amount ($): ')
-        discount = prompt('Enter the percentage of discount (%): ')
+        purchase = parseFloat(prompt('Enter the purchase amount ($): '))
+        discount = parseFloat(prompt('Enter the percentage of discount (%): '))
 
         discount = (purchase *  discount) / 100
         purchase -= discount

@@ -13,6 +13,8 @@
 
 let attacker = prompt('Attacker name:')
 let attackPower = prompt('Attack power:')
+// another option
+       // const attackPower = parseFloat(prompt("Attack power:"))
 
 let defender = prompt ('Defender’s name:')
 let lifeScore = prompt ('Life score Defender: ')
@@ -22,6 +24,8 @@ let shield = prompt('Does defender has a shield? (yes/no)')
 attackPower = attackPower.parseInt(attackPower)
 defenderPower = defenderPower.parseInt(defenderPower)
 lifeScore = lifeScore.parseInt(lifeScore)
+
+// let danoCausado = 0
 
 if (attackPower > defenderPower && shield == 'no') {
     let damage = attackPower - defenderPower
@@ -36,6 +40,18 @@ else {
     let damage = 0
     alert('Damage: ' + damage + '\nLife Score of ' + defender + ' : ' + lifeScore)
 }
+
+//other exibihition style (no fuction description in "if")
+/* 
+    pontosDeVida -= danoCausado
+
+    alert(atacante + " causou " + danoCausado + " pontos de dano em " + defensor)
+    alert(
+        atacante + "\nPoder de ataque: " + poderDeAtaque + "\n\n" +
+        defensor + "\nPontos de vida: " + pontosDeVida +
+        "\nPoder de defesa: " + poderDeDefesa + "\nPossui escudo: " + possuiEscudo
+    )
+*/
 
 
 
