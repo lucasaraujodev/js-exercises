@@ -15,3 +15,54 @@ Ao clicar na opção de adicionar dinheiro o programa deve perguntar pela quanti
 A opção de remover dinheiro deve fazer o mesmo, porém subtraindo o valor. A opção de sair deve encerrar o programa.
 
 */
+
+// --- ATTEMPT #01 ---
+/*
+const amount = parseFloat(prompt("Enter your initial amount (U$)"))
+
+while (true) {
+        option = prompt("You have U$" + amount + "\nWould you like to add or remove money?\n[1] add\n[2] remove\n[3] exit")
+        if (option == "1") {
+            let addition = prompt("How much do you want to add?").parseFloat(addition)
+            amount += addition
+        } if (option == "2") {
+            let subtraction = prompt("How much do you want to add?").parseFloat(subtraction)
+            amount -= subtraction
+        } if (option == "3") {
+            alert("The system is being closed.")
+        } else {
+            alert("Invalid option. Please, reload the page.")
+        }
+         
+    }
+*/
+
+// ChatGPT answer:
+
+    let amount = parseFloat(prompt("Enter your initial amount (U$)"));
+
+while (true) {
+    let option = prompt("You have U$" + amount.toFixed(2) + "\nWould you like to add or remove money?\n[1] add\n[2] remove\n[3] exit");
+    
+    if (option === "1") {
+        let addition = parseFloat(prompt("How much do you want to add?"));
+        if (!isNaN(addition)) {
+            amount += addition;
+        } else {
+            alert("Invalid input. Please enter a valid number.");
+        }
+    } else if (option === "2") {
+        let subtraction = parseFloat(prompt("How much do you want to remove?"));
+        if (!isNaN(subtraction)) {
+            amount -= subtraction;
+        } else {
+            alert("Invalid input. Please enter a valid number.");
+        }
+    } else if (option === "3") {
+        alert("Exiting the program.");
+        break; // Exit the loop
+    } else {
+        alert("Invalid option. Please choose again.");
+    }
+}
+

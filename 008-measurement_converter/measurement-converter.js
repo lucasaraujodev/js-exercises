@@ -37,3 +37,31 @@ O programa deve então converter a medida de acordo com a opção escolhida e ex
 O programa também deve exibir uma mensagem de “Opção inválida” caso o usuário insira uma opção diferente das disponíveis (use o break e o default para isso)
 
 */
+
+let measurement = prompt("Enter a measurement (in meters):")
+let convertion = prompt("Which unit of measurement this value should be converted to?\n\n[1] millimeter (mm)\n[2] centimeter (cm)\n[3]decimeter (dm)\n[4] decameter (dam)\n[5] hectometer (hm)\n[6] kilometer (km)")
+
+measurement = parseFloat(measurement)
+
+switch (convertion) {    
+    case convertion = "1": 
+        alert((measurement *= 1000) + "mm")
+        break
+    case convertion = "2": 
+        alert((measurement *= 100) + "cm")
+        break
+    case convertion = "3": 
+        alert((measurement *= 10) + "dm")
+        break
+    case convertion = "4": 
+        alert((measurement /= 10) + "dam")
+        break
+    case convertion = "5": 
+        alert((measurement /= 100) + "hm")
+        break
+    case convertion = "6": 
+        alert((measurement /= 1000) + "km")
+        break
+    default:
+        alert("Invalid option. Please, reload the page.")
+}

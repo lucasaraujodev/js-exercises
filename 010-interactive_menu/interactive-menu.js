@@ -19,3 +19,17 @@ Ao clicar em alguma das quatro primeiras opções uma mensagem deve ser exibida 
 Isso deve continuar acontecendo até que o usuário escolha a opção “Encerrar”. Ao escolhe-la uma mensagem dizendo que o sistema está sendo encerrado deve ser exibida na tela e então o programa é finalizado.
 
 */
+
+let option = prompt("Choose an option below:\n\n[1] one\n[2] two\n[3] three\n[4] four\n[5] quit")
+
+option = parseInt(option)
+
+if (option > 5) {
+    alert("Invalid option. Please, reload the page.")
+} else {
+    while (option <= 4) {
+        alert("You choosed the option " + option)
+        option = prompt("Choose an option below:\n\n[1] one\n[2] two\n[3] three\n[4] four\n[5] quit")
+    }
+    alert("The system is being closed.")
+}

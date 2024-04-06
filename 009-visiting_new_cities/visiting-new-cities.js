@@ -15,3 +15,20 @@ Caso a resposta seja sim, pergunte o nome da cidade e o armazene em uma variáve
 No fim, o programa deve exibir o nome do turista, quantas e quais cidades ele visitou.
 
 */
+
+const touristName = prompt("What is your name?")
+let visitedCities = []
+let touristValidation = prompt("Have you ever visited a city?\n\n[1] Yes\n[2] No")
+
+while (touristValidation === "1") {
+    const city = prompt("Which city?")
+    visitedCities.push(city)
+    touristValidation = prompt("Have you ever visited another city?\n\n[1] Yes\n[2] No")   
+}
+
+const numberOfVisitedCities = visitedCities.length
+
+alert("Tourist's name: " + touristName + "\nNumber of visited cities: " + numberOfVisitedCities + "\nVisited Cities: " + visitedCities.join(", "))
+
+
+
