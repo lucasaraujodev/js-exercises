@@ -20,7 +20,12 @@ Isso deve continuar acontecendo até que o usuário escolha a opção “Encerra
 
 */
 
-let option = prompt("Choose an option below:\n\n[1] one\n[2] two\n[3] three\n[4] four\n[5] quit")
+let option = prompt("Choose an option below:\n\n" + 
+                    "[1] one\n" +
+                    "[2] two\n" +
+                    "[3] three\n" +
+                    "[4] four\n" +
+                    "[5] quit")
 
 option = parseInt(option)
 
@@ -29,7 +34,52 @@ if (option > 5) {
 } else {
     while (option <= 4) {
         alert("You choosed the option " + option)
-        option = prompt("Choose an option below:\n\n[1] one\n[2] two\n[3] three\n[4] four\n[5] quit")
+        option = prompt("Choose an option below:\n\n" +
+                        "[1] one\n" +
+                        "[2] two\n" +
+                        "[3] three\n" +
+                        "[4] four\n" +
+                        "[5] quit")
     }
     alert("The system is being closed.")
 }
+
+// onebitcode version 👇🏼
+/* 
+let opcao = ""
+
+do {
+    opcao = prompt(
+    "Seja bem-vindo(a)!\n" +
+    "\nEscolha uma das opções abaixo:" +
+    "\n1 - Opção Um" +
+    "\n2 - Opção Dois" +
+    "\n3 - Opção Três" +
+    "\n4 - Opção Quatro" +
+    "\n5 - Encerar"
+  )
+
+  switch (opcao) {
+    case "1":
+      alert("Você escolheu a opção 1.")
+      break
+    case "2":
+      alert("Você escolheu a opção 2.")
+      break
+    case "3":
+      alert("Você escolheu a opção 3.")
+      break
+    case "4":
+      alert("Você escolheu a opção 4.")
+      break
+    case "5":
+      alert("Encerrando o programa...")
+      break
+    default:
+      alert("Entrada inválida! Escolha uma das cinco opções.")
+  }
+  
+} while (opcao !== "5");
+
+
+*/

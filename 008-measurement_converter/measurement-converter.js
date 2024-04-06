@@ -39,7 +39,13 @@ O programa também deve exibir uma mensagem de “Opção inválida” caso o us
 */
 
 let measurement = prompt("Enter a measurement (in meters):")
-let convertion = prompt("Which unit of measurement this value should be converted to?\n\n[1] millimeter (mm)\n[2] centimeter (cm)\n[3]decimeter (dm)\n[4] decameter (dam)\n[5] hectometer (hm)\n[6] kilometer (km)")
+let convertion = prompt("Which unit of measurement this value should be converted to?\n\n" +
+                        "[1] millimeter (mm)\n" +
+                        "[2] centimeter (cm)\n" +
+                        "[3]decimeter (dm)\n" +
+                        "[4] decameter (dam)\n" +
+                        "[5] hectometer (hm)\n" +
+                        "[6] kilometer (km)")
 
 measurement = parseFloat(measurement)
 
@@ -65,3 +71,29 @@ switch (convertion) {
     default:
         alert("Invalid option. Please, reload the page.")
 }
+
+// after onebitcode's correction... You can write "switch" like this (eliminating in the cases the expression "convertion ="):
+/*
+switch (convertion) {    
+    case "1": 
+        alert((measurement *= 1000) + "mm")
+        break
+    case "2": 
+        alert((measurement *= 100) + "cm")
+        break
+    case "3": 
+        alert((measurement *= 10) + "dm")
+        break
+    case "4": 
+        alert((measurement /= 10) + "dam")
+        break
+    case "5": 
+        alert((measurement /= 100) + "hm")
+        break
+    case "6": 
+        alert((measurement /= 1000) + "km")
+        break
+    default:
+        alert("Invalid option. Please, reload the page.")
+}
+*/

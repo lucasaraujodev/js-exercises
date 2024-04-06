@@ -15,3 +15,13 @@ O programa deve começar pedindo o número a ser usado nos cálculos e então sa
 Depois o programa deve exibir esses resultados e finalizar.
 
 */
+
+const number = prompt("Enter a number:")
+
+let result = ""
+
+for (let factor = 1; factor <= 20; factor++) {
+    result += " -> " + number + " x " + factor + " = " + (number * factor) + "\n"
+}
+
+alert ("Result of the multiplication table of " + number + ":\n\n" + result)
