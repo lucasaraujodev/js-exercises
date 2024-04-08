@@ -20,3 +20,34 @@ O programa só deve ser encerrado ao escolher a opção de “Sair”, caso cont
 
 */
 
+const cards = []
+let menu = ""
+
+do {
+    menu = prompt(
+        "Cards: " + cards.length +
+        "\n[1] Add a card\n[2] Pull a card\n[3] Exit"
+    )
+
+    switch(menu) {
+        case "1":
+            const newCard = prompt("What is the card?")
+            cards.push(newCard) /* considering that the last card is on the top of the stack. It could be the opposite w/ unshift */
+            break
+        case "2":
+            const pulledCard = cards.pop()
+            if(!pulledCard) {
+                alert("There isn't any card.")
+            } else {
+                alert("You pulled a(n) " + pulledCard)
+            }
+            break
+        case "3":
+            alert("The system is finishing.")
+            break
+        default:
+            alert("Invalid option!")
+    }
+
+} while (menu !== "3")
+

@@ -4,7 +4,7 @@
 
 🇺🇸: Write a JavaScript program to simulate a waiting line at a doctor's office.
 
-The program must start by showing an interactive menu on the screen containing a list of all patients waiting in order, showing their position next to their name (e.g.: 1st Matheus, 2nd Marcos, etc.).
+The program must start by showing an interactive menu on the screen containing a list of all patients waiting in order, showing their position next to their name (e.g.: 1st Mattews, 2nd Mark, etc.).
 
 The menu should also allow you to choose between the options “New patient”, to add a new patient to the end of the queue (asking for the patient's name), “Consult patient”, which removes the first patient from the queue and shows the name on the screen of the consulted patient, and “Exit”.
 
@@ -20,3 +20,71 @@ O programa só deve ser encerrado ao escolher a opção “Sair”, caso contrá
 
 */
 
+// ---ATTEMPT #01---
+/*
+let patientsList = []
+
+
+do {
+    let menu = prompt(patientsList + 
+            "\n\n[1] New patient" +
+            "\n[2] Consult patient" +
+            "\n[3] Exit")
+
+    switch (menu) {
+        case "1":
+            prompt("What is the patient's name?").push(patientsList)
+
+        case "2":
+            alert("Patient" + patientsList[0] + "! Please, go to the doctor's office.")
+            alert(menu.shift(patientsList))
+        
+        case "3":
+            alert("The system is finishing.")
+            break 
+    }
+
+} while(menu !== "3")
+
+*/
+
+// onebitcode correction 👇🏼
+
+let queue = []
+let menu = ""
+
+do {
+    let patients = ""
+    for (let i = 0; i < queue.length; i++) {
+        patients += (i + 1) + "º - " + queue[i] + "\n"
+    }
+
+    menu = prompt(
+                "Patients:\n" + patients + 
+            "\n\n[1] New patient" +
+            "\n[2] Consult patient" +
+            "\n[3] Exit")
+
+    switch (menu) {
+        case "1":
+            const newPatient = prompt("What is the patient's name?")
+            queue.push(newPatient)
+            break
+        case "2":
+            const consultedPatient = queue.shift()
+            // for not showing "undefined" when the array is empty
+            if (consultedPatient /*It'll be corverted in a boolean type*/) { //you also can write as "queue.length  > 0"
+                alert("Consulted Patient: " + consultedPatient) // removed from the queue
+            } else {
+                alert("There's no patient at the waiting line.")
+            }
+            
+            break        
+        case "3":
+            alert("The system is finishing.")
+            break
+        default:
+            alert("Invalid option. Please, try again.")
+    }
+
+} while(menu !== "3")
