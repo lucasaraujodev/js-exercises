@@ -28,21 +28,51 @@
 
 */
 
-//---ATTEMPT #01---
-/*
-let registred = ""
-for (savedProperties = []; savedProperites; saved)
-let savedProperties = []
-let ownersName = savedProperties[0][1].prompt("What is the owner's name?")
-let menu = prompt("Properties registered: " + registred +
-    "\n\n[1] Save a property.\n[2] Show all saved properties.\n[3] Exit."
-)
+const properties = []
+let option = ""
+
 do {
-switch (menu) {
+
+    option = prompt(
+        "Welcome to Real State Registration!\n" +
+        "Total of Properties: " + properties.length + 
+        "\n\nChoose an option: \n[1] New Property\n[2] Properties List\n[3] Exit"
+    )
+
+switch (option) {
     case "1":
-        
+        const property = {}
+
+        property.owner = prompt("Enter the name of the owner's property:")
+        property.bedrooms = prompt("How many bedrooms does the property have?")
+        property.bathrooms = prompt("How many bathrooms does the property have?")
+        property.garage = prompt("Does the property has a garage? (Yes/No)")
+
+        const confirm = confirm(
+            "Save this property?\n" +
+             "\nOwner: " + property.owner +
+             "\nBedrooms: " + property.bedrooms +
+             "\nBathrooms: " + property.bathrooms +
+             "\nGarage: " + property.garage
+        )
+
+        if(confirm) {
+            properties.push(property)
+            alert("Property saved!")
+        } else {
+            alert("Returning to menu.")
+        }
 
     case "2":
+        for (let i = 0; i < properties.length; i++) {
+            alert(
+                "Property " + (i + 1) +
+                "\nOwner: " + properties[i].owner +
+                "\nBedrooms: " + properties[i].bedrooms +
+                "\nBathrooms: " + properties[i].bathrooms + 
+                "\nGarage: " + properties[i].garage
+            )
+        }
     case "3":
         alert("The system is ending...")
         break
@@ -50,6 +80,9 @@ switch (menu) {
         alert("Invalid option.")
 }
 
-} while (menu !== "3")
+} while (option !== "3")
 
-*/
+
+
+
+
