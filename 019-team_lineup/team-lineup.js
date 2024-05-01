@@ -33,3 +33,36 @@ Tip: remember that it is possible to access the text of an input through the val
 Dica: lembrando que é possível acessar o texto de um input através da propriedade value.
 
 */
+
+function addPlayer() {
+    const position = document.getElementById('position').value
+    const name = document.getElementById('name').value
+    const number = document.getElementById('number').value  
+    // confirmação de escalação
+    const confirmation = confirm("Escalar " + name + " como " + position + "?")
+
+    if (confirmation) {
+        const teamList = document.getElementById('team-list')
+        const playerItem = document.createElement('li')
+        playerItem.id = 'player-' + number
+        playerItem.innerText = position + ": " + name + " (" + number + ")"
+        teamList.appendChild(playerItem)
+        // limpando o formulário após submissão confirmada
+        document.getElementById('position').value = ''
+        document.getElementById('name').value = ''
+        document.getElementById('number').value = ''
+    }
+}
+
+function removePlayer() {
+    const number = document.getElementById('numberToRemove').value
+    const playerToRemove = document.getElementById('player-' + number)
+
+    const confirmation = confirm("Remover o jogador " + playerToRemove.innerText + "?")
+
+    if (confirmation) {
+        document.getElementById('team-list').removeChild(playerToRemove)
+        // playerToRemove.remove() -> outra opção por remoção direta, não pelo elemento pai
+        document.getElementById('numberToRemove').value = ""
+    }
+} 
