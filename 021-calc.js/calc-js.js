@@ -37,6 +37,7 @@ input.addEventListener('keydown', function(ev) {
 
 document.getElementById('equal').addEventListener('click', calculate)
 
+//exportado para calculate.js
 function calculate() {
 // test console.log('Calculado!')
 // previndo erros
