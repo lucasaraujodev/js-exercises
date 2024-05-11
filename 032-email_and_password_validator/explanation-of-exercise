@@ -1,0 +1,41 @@
+🇺🇸: Build an HTML page containing a registration form with name, email and password fields where, when submitting the form, a validation must be carried out to verify that the email is a valid email and that the password meets the minimum security rules.
+
+For an email to be valid it must have:
+
+- An @ character
+- Text before the @ with at least 2 characters, numbers or _ (underscore).
+- Text after @ with at least 2 characters
+- One . followed by more text with at least 2 characters after the text after the @
+- Structure of a valid email: **xx@xx.xx**
+
+For a password to be valid it must have:
+
+- At least one lowercase letter.
+- At least one capital letter.
+- At least one number
+- At least one special character.
+- At least 8 characters.
+
+Validations should be written in separate functions that throw a new error on failure with an appropriate message. This error must be handled through a trycatch block, preventing an error from being issued in the browser console and showing the user the error that occurred.
+
+🇧🇷: Construa uma página HTML contendo um formulário de registro com os campos nome, email e senha onde, ao submeter o formulário, deverá ser feita uma validação para verificar se o email é um email válido e se a senha atende as regras mínimas de seguraça.
+
+Para que um email seja válido ele deve possuir:
+
+- Um caractere @
+- Texto antes do @ com pelo menos 2 caracteres, números ou _ (underscore).
+- Texto após o @ com pelo menos 2 caracteres
+- Um . seguido de mais texto com pelo menos 2 caracteres após o texto após o @
+- Estrutura de um email válido: **xx@xx.xx**
+
+Para que uma senha seja válida ela deve possuir:
+
+- Pelo menos uma letra minúscula.
+- Pelo menos uma letra maiúscula.
+- Pelo menos um número
+- Pelo menos um caractere especial.
+- Pelo menos 8 caracteres.
+
+As validação devem ser escritas em funções separadas que lançam um novo erro em caso de falha com uma mensagem apropriada. Esse erro deverá ser tratado através de um bloco trycatch, evitando que um erro seja emitido no console do navegador e mostrando para o usuário o erro ocorrido.
+
+

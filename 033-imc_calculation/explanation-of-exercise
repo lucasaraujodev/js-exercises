@@ -1,0 +1,23 @@
+🇺🇸: Write an asynchronous function that takes a person's weight and height as parameters and returns a promise of that person's BMI. Furthermore, if any of the parameters are not of type “number”, the promise must be rejected.
+
+You must also create another function that receives the same weight and height parameters, calls the function that calculates the BMI and then displays the results of the promises in text in the terminal. If the promise is resolved, you must also show the person's BMI status in the terminal according to the following table:
+
+- Below 18.5: **thinness**
+- Between 18.5 and 24.9: **normal**
+- Between 25 and 29.9: **overweight**
+- Between 30 and 39.9: **obesity**
+- Over 40: **severe obesity**
+
+Within the second function, after calling the function that calculates the BMI, call the console's log function with any message to highlight the asynchronous operation of the code.
+
+🇧🇷: Escreva uma função assíncrona que têm como parâmetros o peso e a altura de uma pessoa e retorna uma promise do IMC dessa pessoa. Além disso, caso algum dos parâmetros não seja do tipo “number” a promise deverá ser rejeitada.
+
+Você deverá criar também uma outra função que recebe os mesmos parâmetros de peso e altura, chama a função que calcula o IMC e então exibe no terminal o resultado das promises em texto. Caso a promise seja resolvida você também deverá mostrar no terminal a situação do IMC da pessoa de acordo com a seguinte tabela:
+
+- Abaixo de 18,5: **magreza**
+- Entre 18,5 e 24,9: **normal**
+- Entre 25 e 29,9: **sobrepeso**
+- Entre 30 e 39,9: **obesidade**
+- Acima de 40: **obesidade grave**
+
+Dentro da segunda função, após chamar a função que calcula o IMC, chame a função log do console com uma mensagem qualquer para evidenciar o funcionamento assíncrono do código.

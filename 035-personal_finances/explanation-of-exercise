@@ -1,0 +1,27 @@
+🇺🇸: ### Personal finances
+
+Develop a single-page web application using html, css and javascript to control personal finances that meets the following requirements:
+
+- your application must use the json-server library to simulate a backend that stores financial transactions.
+- transactions must have at least the properties id (managed by json-server), name and value.
+- the application must show all transactions saved in the backend on the page.
+- the application must have a form to create a new transaction in the backend (without updating the page) through a POST request.
+- new transactions created should appear in the list of all transactions as soon as they are created, all without refreshing the page.
+- the application must allow editing of transaction data through a PUT request (PUT works in the same way as POST, sending data to be updated in the body and with the id of the resource to be edited in the url).
+- the application must allow deleting a transaction through a DELETE request (DELETE requests do not need a body, just the id of the resource to be deleted in the url).
+- the application must also show the total balance on the page, which is calculated by adding up all transaction values (which can be positive or negative).
+- the total balance value must always be updated on the screen, that is, when creating, editing or deleting a transaction the balance must reflect the new value.
+
+🇧🇷: ### Finanças Pessoais
+
+Desenvolva uma aplicação web de página única utilizando html, css e javascript para controle de finanças pessoais que atenda aos seguintes requisitos:
+
+- sua aplicação deverá utilizar a biblioteca json-server para simular um backend que armazena transações financeiras.
+- transações devem possuir, pelo menos, as propriedades id (gerenciado pelo json-server), nome e valor.
+- a aplicação deverá mostrar na página todas as transações salvas no backend.
+- a aplicação deverá ter um formulário para criar uma nova transação no backend (sem atualizar a página) através de uma requisição POST.
+- novas transações criadas devem aparecer na lista de todas as transações assim que são criadas, tudo isso sem atualizar a página.
+- a aplicação deverá permitir editar os dados de uma transação através de uma requisição PUT (o PUT funciona da mesma forma que o POST, enviando dados a serem atualizados no body e com o id do recurso a ser editado na url).
+- a aplicação deverá permitir excluir uma transação através de uma requisição DELETE (as requisições DELETE não precisam de um body, apenas do id do recurso a ser excluído na url).
+- a aplicação também deverá mostrar na página o saldo total, que é calculado somando todos os valores das transações (que podem ser positivos ou negativos).
+- o valor do saldo total deve estar sempre atualizado na tela, ou seja, ao criar, editar ou excluir uma transação o saldo deverá refletir o novo valor.
